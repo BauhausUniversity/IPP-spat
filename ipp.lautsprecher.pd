@@ -1,6 +1,6 @@
 #N canvas 373 281 297 170 10;
 #X obj 47 56 *~ 0.1;
-#X obj 134 20 r dpp.mastervolume;
+#X obj 134 20 r ipp.mastervolume;
 #X obj 25 16 catch~ \$1-audio;
 #X obj 27 90 dac~ \$2;
 #X connect 0 0 3 0;

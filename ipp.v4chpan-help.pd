@@ -1,9 +1,9 @@
 #N canvas 945 139 827 469 10;
 #X obj 35 27 noise~;
 #X floatatom 88 75 5 0 0 0 - - -;
-#X obj 189 22 dpp.layout;
+#X obj 189 22 ipp.layout;
 #X obj 78 243 throw~ a2-audio;
-#X obj 34 104 dpp.v4chpan;
+#X obj 34 104 ipp.v4chpan;
 #X obj 31 212 throw~ a1-audio;
 #X obj 36 274 throw~ b1-audio;
 #X obj 181 244 throw~ a3-audio;

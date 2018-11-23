@@ -1,9 +1,9 @@
 #N canvas -865 191 742 779 10;
 #X obj 35 27 noise~;
 #X floatatom 82 466 5 0 0 0 - - -;
-#X obj 147 47 dpp.layout;
+#X obj 147 47 ipp.layout;
 #X floatatom 119 470 5 0 0 0 - - -;
-#X obj 46 511 dpp.panmatrix;
+#X obj 46 511 ipp.panmatrix;
 #X obj 82 385 cos;
 #X obj 121 389 cos;
 #X obj 83 420 + 1;
