@@ -1,0 +1,7 @@
+#N canvas 158 121 450 300 10;
+#X obj 112 65 ipp.lautsprecher box 1;
+#X obj 312 44 noise~;
+#X obj 313 95 throw~ box-audio;
+#X obj 312 69 *~ 0.1;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;

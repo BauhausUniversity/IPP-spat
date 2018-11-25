@@ -1,0 +1,13 @@
+#N canvas 945 139 513 473 10;
+#X obj 33 46 noise~;
+#X floatatom 130 56 5 0 0 0 - - -;
+#X obj 34 139 throw~ box1-audio;
+#X obj 34 79 *~ 0.05;
+#X obj 91 164 throw~ box2-audio;
+#X obj 33 104 ipp.2chpan;
+#X obj 42 258 ipp.layout;
+#X connect 0 0 3 0;
+#X connect 1 0 5 1;
+#X connect 3 0 5 0;
+#X connect 5 0 2 0;
+#X connect 5 1 4 0;

@@ -1,0 +1,7 @@
+#N canvas 154 52 340 191 10;
+#X obj 59 46 ipp.layout;
+#X obj 143 46 noise~;
+#X obj 143 71 *~ 0.1;
+#X obj 144 97 throw~ b2-audio;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
