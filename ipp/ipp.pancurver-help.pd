@@ -1,0 +1,2 @@
+#N canvas 473 223 632 585 10;
+#X obj 101 186 ipp.pancurver;

@@ -22,10 +22,10 @@
 #X obj 433 337 outlet~;
 #X obj 461 294 *~ 0.707;
 #X obj 491 340 outlet~;
-#X obj 118 166 pancurver 3 0;
-#X obj 234 165 pancurver 3 1;
-#X obj 343 163 pancurver 3 2;
-#X obj 456 162 pancurver 3 3;
+#X obj 118 166 ipp.pancurver 3 0;
+#X obj 234 165 ipp.pancurver 3 1;
+#X obj 343 163 ipp.pancurver 3 2;
+#X obj 456 162 ipp.pancurver 3 3;
 #X connect 0 0 6 0;
 #X connect 0 0 9 0;
 #X connect 0 0 16 0;
