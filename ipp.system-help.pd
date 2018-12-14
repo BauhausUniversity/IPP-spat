@@ -1,4 +1,5 @@
-#N canvas 733 142 742 779 10;
+#N canvas 1195 213 742 779 10;
+#X declare -path ipp;
 #X obj 35 27 noise~;
 #X floatatom 82 466 5 0 0 0 - - -;
 #X floatatom 119 470 5 0 0 0 - - -;
@@ -11,11 +12,11 @@
 #X obj 101 325 f;
 #X obj 126 326 + 1;
 #X obj 100 304 metro 40;
-#X obj 99 279 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 99 279 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 82 361 / 50;
 #X obj 121 361 / 36;
-#X obj 61 91 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 61 91 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X msg 61 141 1 \, 0 50;
 #X obj 61 166 line~;
@@ -23,9 +24,9 @@
 #X obj 60 119 metro 200;
 #X obj 36 61 *~ 0.5;
 #X obj 181 512 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 724 1;
+-1 -1 0 1;
 #X obj 162 514 vsl 15 128 1 0 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 77 1;
+-1 -1 0 1;
 #X obj 223 346 r xy;
 #X obj 223 392 unpack f f;
 #X text 262 349 receiving from tracking system;
@@ -35,7 +36,9 @@
 spatialization to the subs.;
 #X obj 312 230 s ipp.mastervolume;
 #X obj 313 114 vsl 15 99 0.01 1 1 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1100 1;
+-1 -1 0 1;
+#X obj 202 38 declare -path ipp;
+#X obj 204 18 ipp.layout;
 #X connect 0 0 20 0;
 #X connect 1 0 22 0;
 #X connect 1 0 27 1;

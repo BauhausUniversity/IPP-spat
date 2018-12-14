@@ -1,5 +1,5 @@
-#N struct 1058-point float xPos float yPos float rgb;
-#N canvas 252 82 1095 852 10;
+#N struct 1177-point float xPos float yPos float rgb;
+#N canvas 792 93 1095 852 10;
 #N canvas 100 374 1369 453 sometemplate 0;
 #X text 307 256 [drawnumber xPos 200 0 900 xPos=];
 #X text 307 286 [drawnumber yPos 200 20 900 xPos=];
@@ -81,7 +81,7 @@ yPos(-200:200)(-194:206), f 118;
 -1 -1;
 #X obj 552 385 expr -1*$f1+100;
 #N canvas 163 137 827 680 \$0-gui 0;
-#X scalar 1058-point 50 50 111 \;;
+#X scalar 1177-point 50 50 111 \;;
 #X coords 0 0 100 100 100 100 2 0 0;
 #X restore 498 84 pd \$0-gui;
 #X obj 166 189 f \$0;

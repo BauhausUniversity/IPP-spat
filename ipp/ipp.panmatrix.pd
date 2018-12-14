@@ -28,7 +28,6 @@
 #X obj 203 28 inlet;
 #X obj 35 31 inlet~;
 #X obj 203 62 t f f f f f;
-#X obj 383 34 ipp.layout;
 #X connect 1 0 2 0;
 #X connect 1 1 5 0;
 #X connect 1 2 9 0;
