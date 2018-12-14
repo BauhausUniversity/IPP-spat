@@ -1,0 +1,144 @@
+#N canvas 347 194 1327 867 10;
+#X msg 46 111 disconnect;
+#X msg 10 36 bind 9001;
+#X msg 33 87 connect 134.96.37.226 1065;
+#X obj 558 399 tcpclient;
+#X msg 530 68 connect 134.96.37.226 1066;
+#X msg 542 92 disconnect;
+#X msg 619 297 send /subscribe/blender/relative/parent;
+#X msg 568 148 send /subscribe/blender/relative/vector;
+#X msg 578 179 send /subscribe/blender/matrix;
+#X msg 586 208 send /subscribe/blender/relative/matrix;
+#X msg 556 117 send /subscribe/blender/vector;
+#X obj 564 514 print unpacked;
+#X msg 22 62 connect 127.0.0.1 1065;
+#X msg 514 43 connect 127.0.0.1 1066;
+#X msg 595 233 sendtyped /subscribe/blobs/color fff 255 255 255;
+#X msg 610 259 sendtyped /subscribe/blobs/color ffffff -128 128 -128
+128 -128 128;
+#X obj 561 451 unpackOSCstream;
+#X obj 581 355 packOSCstream;
+#X floatatom 664 492 5 0 0 1 clock_offset - -;
+#X msg 57 135 send /subscribe/meta/api/osc/version;
+#X msg 64 164 send /subscribe/meta/api/osc/vendor;
+#X msg 79 212 sendtyped /subscribe/meta/api/osc/version fff 1 0 0;
+#X msg 89 235 sendtyped /subscribe/meta/server/connections/@/id fff
+0 0 0;
+#X msg 215 657 sendtyped /subscribe/meta/clients fff 0 0 0;
+#X msg 123 309 sendtyped /subscribe/meta/server/connections/@/url fff
+0 0 0;
+#X msg 72 188 sendtyped /subscribe/m[!f-za-d]ta/???/o[sS]c/ve* fff
+0 0 0;
+#X msg 130 335 sendtyped /subscribe/meta/server/connections/@/rate
+fff 1.3 0 0;
+#X msg 138 372 sendtyped /subscribe/meta/server/connections/@/client
+fff 0 0 0;
+#X msg 144 411 sendtyped /subscribe/meta/server/connections/@/path
+fff 0 0 0;
+#X msg 155 453 sendtyped /subscribe/meta/server/connections/@/query
+fff 0 0 0;
+#X msg 159 501 sendtyped /subscribe/meta/templates fff 0 0 0;
+#X msg 166 523 sendtyped /subscribe/meta/templates/orientation fff
+0 0 0;
+#X msg 102 259 sendtyped /subscribe/meta/server/connections/$*/id fff
+0 0 0;
+#X msg 112 285 sendtyped /subscribe/meta/server/connections/:*/id fff
+0 0 0;
+#X msg 187 596 sendtyped /subscribe/@/blender/*Arm/upper fff 0 0 0
+;
+#X msg 223 698 sendtyped /subscribe/@/blender/*Arm/vector fff 1 0 0
+;
+#X msg 232 720 sendtyped /subscribe/@/blender/*Arm/upper/vector fff
+1 0 0;
+#X msg 195 625 sendtyped /subscribe/@/blender/Spine*/lower fff 0 0
+0;
+#X msg 171 544 sendtyped /subscribe/meta/templates/b*/joints fff 0
+0 0;
+#X msg 178 569 sendtyped /subscribe/meta/templates/b*/blobs fff 0 0
+0;
+#X msg 239 743 sendtyped /subscribe/@/blender/Spine*/lower/vector fff
+1 0 0;
+#X msg 256 774 sendtyped /subscribe/@/blender/Spine4/lower/matrix fff
+0 0 0;
+#X msg 257 798 sendtyped /subscribe/@/blender/Spine4/upper/matrix fff
+0 0 0;
+#X msg 258 822 sendtyped /subscribe/@/blender/Spine4/matrix fff 0 0
+0;
+#X msg 277 851 sendtyped /subscribe/@/blobs/@/blobs/upper/matrix fff
+0 0 0;
+#X msg 279 875 sendtyped /subscribe/@/blobs/@/blobs/matrix fff 0 0
+0;
+#X msg 278 903 sendtyped /subscribe/@/blobs/@/blobs/vector fff 0 0
+0;
+#X msg 278 931 sendtyped /subscribe/@/blobs/@/blobs/upper/vector fff
+0 0 0;
+#X msg 295 962 sendtyped /subscribe/@/blobs/@/color fff 0 0 0;
+#X msg 293 992 sendtyped /subscribe/@/blobs/@/error fff 0 0 0;
+#X msg 293 1024 sendtyped /subscribe/@/blobs/@/scaling/quality fff
+0 0 0;
+#X msg 292 1051 sendtyped /subscribe/@/blobs/@/scaling/progress fff
+0 0 0;
+#X msg 318 1084 sendtyped /subscribe/@/blender/*Arm/vector fff 1 100
+0;
+#X msg 313 1122 sendtyped /subscribe/@/blender/@/vector fff 0 0 0;
+#X obj 39 1244 netsend -u -b;
+#X floatatom 39 1269 5 0 0 0 - - -;
+#X obj 77 1219 list trim;
+#X obj 227 1172 oscformat subscribe @ blender Root vector;
+#X obj 77 1198 list prepend send;
+#X connect 0 0 54 0;
+#X connect 1 0 54 0;
+#X connect 2 0 54 0;
+#X connect 3 0 16 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 17 0;
+#X connect 7 0 17 0;
+#X connect 8 0 17 0;
+#X connect 9 0 17 0;
+#X connect 10 0 17 0;
+#X connect 12 0 54 0;
+#X connect 13 0 3 0;
+#X connect 14 0 17 0;
+#X connect 15 0 17 0;
+#X connect 16 0 11 0;
+#X connect 16 1 18 0;
+#X connect 17 0 3 0;
+#X connect 19 0 58 0;
+#X connect 20 0 58 0;
+#X connect 21 0 58 0;
+#X connect 22 0 58 0;
+#X connect 23 0 58 0;
+#X connect 24 0 58 0;
+#X connect 25 0 58 0;
+#X connect 26 0 58 0;
+#X connect 27 0 58 0;
+#X connect 28 0 58 0;
+#X connect 29 0 58 0;
+#X connect 30 0 58 0;
+#X connect 31 0 58 0;
+#X connect 32 0 58 0;
+#X connect 33 0 58 0;
+#X connect 34 0 58 0;
+#X connect 35 0 58 0;
+#X connect 36 0 58 0;
+#X connect 37 0 58 0;
+#X connect 38 0 58 0;
+#X connect 39 0 58 0;
+#X connect 40 0 58 0;
+#X connect 41 0 58 0;
+#X connect 42 0 58 0;
+#X connect 43 0 58 0;
+#X connect 44 0 58 0;
+#X connect 45 0 58 0;
+#X connect 46 0 58 0;
+#X connect 47 0 58 0;
+#X connect 48 0 58 0;
+#X connect 49 0 58 0;
+#X connect 50 0 58 0;
+#X connect 51 0 58 0;
+#X connect 52 0 58 0;
+#X connect 53 0 58 0;
+#X connect 54 0 55 0;
+#X connect 56 0 54 0;
+#X connect 58 0 56 0;
